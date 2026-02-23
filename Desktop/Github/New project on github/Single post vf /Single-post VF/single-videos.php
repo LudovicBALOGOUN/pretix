@@ -157,7 +157,7 @@ $publication_date = get_the_date();
         <div class="row mt-5 pt-5">
             <div class="col-12">
                 <h2 class="kl-font-secondary kl-fw-bold kl-color-black kl-mb-sp-4">
-                    <?php echo __('Vidéos récentes', 'mansa'); ?>
+                    <?php echo __(' Les dernières vidéos ', 'mansa'); ?>
                 </h2>
             </div>
 
@@ -227,11 +227,10 @@ $publication_date = get_the_date();
 
                         <!-- Date avec icône du sprite -->
                         <div class="post-meta" style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
-                                style="vertical-align: middle; margin-right: 4px;">
+                            <!--  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
                                 <use href="#icon-horaire"></use>
-                            </svg>
-                            <span style="vertical-align: middle;"><?php echo get_the_date('j F Y'); ?></span>
+                            </svg> -->
+                            <span style="vertical-align: middle;"> Publié le <?php echo get_the_date('j F Y'); ?></span>
                         </div>
                     </div>
                 </article>
