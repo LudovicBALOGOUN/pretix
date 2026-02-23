@@ -190,16 +190,11 @@ if ($image_ev && is_array($image_ev) && !empty($image_ev['caption'])) {
                     <!-- Informations pratiques -->
                     <div class="sidebar-info-list">
 
-                        <!-- 3. Quand (Date & Horaire) -->
+                        <!-- 3. Quand (Date & Horaire) - AVEC ICÔNE HORAIRE -->
                         <?php if ($affichage_date || $affichage_heure): ?>
                         <div class="info-row info-row-quand">
                             <div class="info-header">
-                                <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <polyline points="12 6 12 12 16 14" />
-                                </svg>
+                                <?php mansa_icon('horaire', 20, true); ?>
                                 <span class="info-label"><?php echo __('Quand', 'mansa'); ?></span>
                             </div>
                             <div class="info-value">
@@ -212,16 +207,11 @@ if ($image_ev && is_array($image_ev) && !empty($image_ev['caption'])) {
                         </div>
                         <?php endif; ?>
 
-                        <!-- 4. Où (Lieu) -->
+                        <!-- 4. Où (Lieu) - AVEC ICÔNE LOCALISATION -->
                         <?php if ($lieu): ?>
                         <div class="info-row info-row-lieu">
                             <div class="info-header">
-                                <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
+                                <?php mansa_icon('localisation', 20, true); ?>
                                 <span class="info-label"><?php echo __('Où', 'mansa'); ?></span>
                             </div>
                             <div class="info-value"><?php echo nl2br(esc_html($lieu)); ?></div>
@@ -261,6 +251,7 @@ if ($image_ev && is_array($image_ev) && !empty($image_ev['caption'])) {
             <a href="<?php echo esc_url($link_events); ?>" class="kl-btn kl-btn-w-auto">
                 <span class="kl-text-btn kl-text-btn-icon kl-text-btn-icon--left">
                     <?php echo __('Retour à l\'agenda', 'mansa'); ?>
+                    <?php mansa_icon('lien', 16, true, true); // true pour stroke ?>
                 </span>
             </a>
         </div>
